@@ -88,7 +88,7 @@ header {
 
 .contenido{
     text-align: center;
-    padding-top: 70px;
+    padding: 50px 30px;
     display: flex;
     flex-direction: row;
     justify-content: center;
