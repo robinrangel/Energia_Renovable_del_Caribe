@@ -29,12 +29,9 @@
 
     <main>
         <section class="layout">
-        <iframe
-            src="https://player.vimeo.com/video/1109220889?background=1&autoplay=1&loop=1&muted=1" 
-            frameborder="0" 
-            allow="autoplay; fullscreen; picture-in-picture" 
-            allowfullscreen>
-        </iframe>
+            <iframe src="https://player.vimeo.com/video/1109220889?background=1&autoplay=1&loop=1&muted=1"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen>
+            </iframe>
             <div class="layout__content">
                 <h1 class="layout__title">Energías Renovables para un Futuro Sostenible</h1>
                 <p class="layout__text">La Guajira, posee un inmenso potencial en recursos solares y eólicos,
@@ -66,53 +63,70 @@
                 <h3 class="section__title">Los mejores servicios de nuestra parte</h3>
             </div>
 
-            <article class="section__one">
-                <img src="./assets/img_video/eolica.jpeg" alt="energia eólica">
-                <div class="section__article">
-                    <h4 class="article__title">Recursos Eólicos</h4>
-                    <p class="article__text">La Guajira posee uno de los mayores potenciales eólicos de Colombia y
-                        América Latina, gracias a
-                        los fuertes vientos alisios.</p>
+            <article class="article__main">
+                <div class="section__one">
+                    <img src="./assets/img_video/eolica.jpeg" alt="energia eólica">
+                    <div class="section__article">
+                        <h4 class="article__title">Recursos Eólicos</h4>
+                        <p class="article__text">La Guajira posee uno de los mayores potenciales eólicos de Colombia y
+                            América Latina, gracias a
+                            los fuertes vientos alisios.</p>
+                    </div>
+                </div>
+
+                <div class="section__one">
+                    <img src="./assets/img_video/panel_solar.jpeg" alt="energia solar">
+                    <div class="section__article">
+                        <h4 class="article__title">Recursos Solares</h4>
+                        <p class="article__text">El departamento también cuenta con una alta radiación solar, superando
+                            en un 66% el promedio
+                            mundial en algunas zonas (hasta 6 KW/m²).</p>
+                    </div>
                 </div>
             </article>
 
-            <article class="section__two">
-                <img src="./assets/img_video/panel_solar.jpeg" alt="energia solar">
-                <div class="section__artic">
-                    <h4 class="artic__title">Recursos Solares</h4>
-                    <p class="artic__text">El departamento también cuenta con una alta radiación solar, superando en un 66% el promedio
-                        mundial en algunas zonas (hasta 6 KW/m²).</p>
-                </div>
-            </article>
         </section>
 
-        <section>
-            <div>
-                <p>Beneficios</p>
-                <h2>Beneficios sociales</h2>
+        <section class="container__ben">
+            <div class="container__main">
                 <div>
-                    <div>
-                        <img src="./assets/img_video/generar_empleo.jpeg" alt="Generar empleo">
-                        <time datetime="2025-08-13"></time>
-                        <h4>Generación de empleo local</h4>
-                    </div>
-                    <div>
-                        <img src="./assets/img_video/campo.jpg" alt="Zonas rurales">
-                        <time datetime="2025-08-13"></time>
-                        <h4>Mejor acceso a energía en zonas rurales</h4>
-                    </div>
-                    <div>
-                        <img src="./assets/img_video/reduccion_costos.jpg" alt="Reducción de costos">
-                        <time datetime="2025-08-13"></time>
-                        <h4>Reducción de costos a largo plazo</h4>
-                    </div>
-                    <div>
-                        <img src="./assets/img_video/formacion.jpg" alt="Formacion de empleo">
-                        <p><time datetime="2025-08-13"></time></p>
-                        <h4>Programas de formación técnica</h4>
-                    </div>
+                    <p class="container__tag">Beneficios</p>
+                    <h2 class="container__title">Beneficios sociales</h2>
+                </div>
+                <div>
+                    <a class="container__btn" href="./pages/beneficios_sociales.html">Nuestros beneficios</a>
                 </div>
             </div>
+                <div class="container__layout">
+                    <div class="container__card">
+                        <img src="./assets/img_video/beneficios-sociales.jpg" alt="Generar empleo">
+                        <div class="card__overlay">
+                            <h4>Generación de empleo local</h4>
+                            <p>Las energías renovables fomentan la creación de empleos directos (instalación, operación, mantenimiento) e indirectos (cadena de suministros, hotelería, alimentación)</p>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img_video/campo.jpg" alt="Zonas rurales">
+                        <div class="card__overlay">
+                            <h4>Mejor acceso a energía en zonas rurales</h4>
+                            <p>Instalaciones como mini-redes solares electrifican comunidades remotas, mejorando su bienestar.</p>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img_video/reduccion_costos.jpg" alt="Reducción de costos">
+                        <div class="card__overlay">
+                            <h4>Reducción de costos a largo plazo</h4>
+                            <p>Las energías renovables, al operar sin combustible, ofrecen ahorros sostenibles. Comunidades rurales dejan de depender del caro diésel.</p>
+                        </div>
+                    </div>
+                    <div class="container__card">
+                        <img src="./assets/img_video/formacion.jpg" alt="Formacion de empleo">
+                        <div class="card__overlay">
+                            <h4>Programas de formación técnica</h4>
+                            <p>La transición hacia energías limpias crea demanda de habilidades nuevas; por ello, se desarrollan programas de capacitación especializados.</p>
+                        </div>
+                    </div>
+                </div>
         </section>
 
         <section id="register">
