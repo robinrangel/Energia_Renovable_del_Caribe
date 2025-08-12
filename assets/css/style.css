@@ -316,8 +316,8 @@ header {
 
 .container__card{
     position: relative;
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: 350px;
     overflow: hidden;
     cursor: pointer;
     border-radius: 5px;
@@ -348,7 +348,7 @@ header {
     padding: 30px;
     color: white;
     transition: all 300ms linear;
-    transform: translateX(-400px);
+    transform: translateX(-500px);
 }
 
 .card__overlay h4{
