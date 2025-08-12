@@ -4,11 +4,62 @@
     box-sizing: border-box;
 }
 
-header{
-    background-color: aliceblue;
-    text-align: center;
-    padding: 30px 50px;
-    color: black;
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: aliceblue;     /* fondo claro */
+    font-family: sans-serif;
+}
+
+/*logo*/
+.logo img {
+    height: 70px;
+}
+
+/* Menú de navegación */
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #333;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #69c545;
+    /* color naranja al pasar el mouse */
+}
+
+/* Elemento activo */
+.navbar .active {
+    color: #69c545;
+}
+
+/* Botón estilo "GET A QUOTE" */
+.btn-registro{
+    border: 2px solid #69c545;
+    color: #69c545;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+
+.btn-registro:hover {
+    background-color: #69c545;
+    color: #fff;
 }
 
 header h1 {
