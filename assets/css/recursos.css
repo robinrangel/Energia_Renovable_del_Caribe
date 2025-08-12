@@ -70,39 +70,48 @@ header {
 
 .title-one{
     display: inline-block; /*sirve para bloquear la caja*/
-    text-align: center;
-    padding-top: 70px;
+    padding-top: 40px;
     padding-bottom: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
     font-size: 60px;
-    width: 65%;
     color: rgb(29, 28, 28);
 }
 
 .title-two{
     text-align: center;
+    padding-bottom: 20px;
     font-size: 25px;
     color: #224d11;
 }
 
 .contenido{
+    
     text-align: center;
+    padding-top: 20px;
     display: flex;
     gap: 1.5rem;
     max-width: 900px;
     margin: 2rem auto;
     align-items: center;
+    max-width: 1200px;
 }
 
 .contenido img{
-    max-width: 300px;
+    max-width: 400px;
     height: auto;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .contenido p {
     text-align:justify;
     font-size: 1rem;
     line-height: 1.6;
+}
+.contenido h2{
+    padding-bottom: 30px;
+    border-bottom: 3px solid #27ae60;
 }
 
 
@@ -117,15 +126,52 @@ body {
 dl dt {
     text-align:left;
     font-size: 1.2rem;
-    color: rgb(32, 155, 155);
+    color: #69c545;
     margin-bottom: .3rem;
 }
 
 dl dd {
     text-align: left;
-    background: #fff;
+    background: aliceblue;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     margin-bottom: 1.5rem;
+}
+
+.contenido3{
+    padding-top: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.contenido3 h2{
+    color: #69c545 ;
+}
+
+.lista2 {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 55px;
+    max-width: 1200px;
+    margin: 40px auto;
+}
+
+.lista2 h2 {
+    font-size: 1.8rem;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #27ae60;
+    padding-bottom: 10px;
+}
+
+.lista2 ol li {
+    
+    background: aliceblue;
+    padding: 20px;
+    border-left: 5px solid #27ae60;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    
 }
