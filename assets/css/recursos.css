@@ -5,10 +5,13 @@
 }
 
 header{
-    background-color: aliceblue;
+    background-image:url(../img_video/image.png);
+    background-position: center;
+    background-size: cover;
     text-align: center;
     padding: 30px 50px;
     color: black;
+
 }
 
 header h1 {
