@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: aliceblue;
+    text-align: center;
+    padding: 30px 50px;
+    color: black;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    background-color: white;
+    color:black;
+}
+
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    color: black;
+}
+
+#parrafo {
+    background-color: #fff7f2;
+    border-left: 4px solid #ff7b38;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Lista de beneficios */
+dl dt {
+    font-size: 1.2rem;
+    color: rgb(32, 155, 155);
+    margin-bottom: .3rem;
+}
+
+dl dd {
+    background: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin-bottom: 1.5rem;
+}
+
+/* Botón de volver */
+.boton {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.boton button {
+    background-color: #ff7b38;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.boton button:hover {
+    background-color: #e4682e;
+}
+
+/* ====== Footer ====== */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
