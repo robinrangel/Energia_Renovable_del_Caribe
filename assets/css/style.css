@@ -56,10 +56,24 @@ header {
     color: #fff;
 }
 
-.layout__video{
+.layout {
+    position: relative;
     width: 100%;
     height: 720px;
-    object-fit: cover;
+    overflow: hidden;
+}
+
+.layout iframe{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: 100%;
+    height: 150%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none; /* evita que se pueda interactuar con el reproductor */
 }
 
 .layout__content{
@@ -70,6 +84,7 @@ header {
     padding: 15px;
     border-radius: 16px;
     background-color: rgba(255, 253, 253, 0.678);
+    z-index: 1;
 }
 
 .layout__title{
