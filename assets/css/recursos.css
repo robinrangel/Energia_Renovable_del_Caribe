@@ -160,7 +160,7 @@ dl dd {
     color: #69c545 ;
 }
 
-.lista2 {
+.lista3 {
     background: #ffffff;
     border-radius: 12px;
     padding: 55px;
@@ -168,7 +168,7 @@ dl dd {
     margin: 40px auto;
 }
 
-.lista2 h2 {
+.lista3 h2 {
     font-size: 1.8rem;
     color: black;
     font-weight: 700;
@@ -177,7 +177,7 @@ dl dd {
     padding-bottom: 10px;
 }
 
-.lista2 ol li {
+.lista3 ol li {
     
     background: aliceblue;
     padding: 20px;
