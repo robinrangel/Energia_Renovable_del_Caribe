@@ -1,13 +1,4 @@
 
-header{
-    background-image:url(../img_video/image.png);
-    background-position: center;
-    background-size: cover;
-    text-align: center;
-    padding: 30px 50px;
-    color: black;
-}
-
 header {
     display: flex;
     justify-content: space-around;
@@ -93,10 +84,6 @@ header {
     color: #224d11;
 }
 
-#h2{
-    text-align: center;
-}
-
 .contenido{
     text-align: center;
     display: flex;
@@ -117,6 +104,7 @@ header {
     font-size: 1rem;
     line-height: 1.6;
 }
+
 
 body {
     font-family: sans-serif;
