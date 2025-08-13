@@ -48,7 +48,7 @@ header {
 }
 
 /* Botón estilo "GET A QUOTE" */
-.btn-registro{
+.btn-registro {
     border: 2px solid #69c545;
     color: #69c545;
     padding: 0.6rem 1.4rem;
@@ -74,11 +74,12 @@ header {
     padding: 20px;
     margin-top: 30px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 /* Títulos */
-h1, h2 {
+h1,
+h2 {
     text-align: center;
     color: #69c545;
 }
@@ -98,12 +99,11 @@ label {
 input {
     width: 100%;
     padding: 8px;
-    margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
 }
 
-button {
+.form-button {
     width: 100%;
     margin-top: 15px;
     padding: 10px;
@@ -178,7 +178,8 @@ footer p {
 }
 
 .footer__info a:hover {
-    color: #46882c; /* verde claro al pasar el mouse */
+    color: #46882c;
+    /* verde claro al pasar el mouse */
 }
 
 
@@ -228,8 +229,9 @@ footer .info {
     position: fixed;
     bottom: 30px;
     right: 30px;
-    z-index: 9999; /* Aumenta el z-index si otros elementos lo tapan */
+    z-index: 999;
 }
+
 #erc-chatbot-toggle {
     background: #009688;
     color: #fff;
@@ -237,28 +239,30 @@ footer .info {
     border-radius: 50%;
     width: 60px;
     height: 60px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
     font-size: 30px;
     cursor: pointer;
     transition: background 0.3s;
 }
+
 #erc-chatbot-toggle:hover {
     background: #00796b;
 }
+
 #erc-chatbot-window {
     display: none;
     width: 320px;
     height: 400px;
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
     padding: 15px;
     position: absolute;
     bottom: 70px;
     right: 0;
     flex-direction: column;
-    z-index: 9999; /* Asegura que esté por encima de otros elementos */
 }
+
 .erc-chatbot-title {
     font-weight: bold;
     margin-bottom: 10px;
@@ -266,6 +270,7 @@ footer .info {
     font-size: 18px;
     text-align: center;
 }
+
 #erc-chatbot-messages {
     height: 270px;
     overflow-y: auto;
@@ -275,17 +280,19 @@ footer .info {
     margin-bottom: 10px;
     font-size: 15px;
 }
+
 #erc-chatbot-form {
     display: flex;
     gap: 5px;
 }
+
 #erc-chatbot-input {
-    flex: 1;
     padding: 8px;
     border-radius: 5px;
     border: 1px solid #ccc;
     font-size: 15px;
 }
+
 #erc-chatbot-form button {
     background: #009688;
     color: #fff;
@@ -295,7 +302,9 @@ footer .info {
     cursor: pointer;
     font-size: 15px;
     transition: background 0.3s;
+    flex: 1;
 }
+
 #erc-chatbot-form button:hover {
     background: #00796b;
 }

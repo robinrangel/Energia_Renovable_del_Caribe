@@ -50,7 +50,7 @@
                 <option value="550">550 W</option>
             </select>
 
-            <button onclick="calcular()">Calcular</button>
+            <button class="form-button" onclick="calcular()">Calcular</button>
         </div>
 
         <!-- Resultados -->
@@ -93,7 +93,28 @@
         </div>
     </footer>
 
+    <!-- Chatbot Energías Renovable del Caribe -->
+    <div id="erc-chatbot">
+        <button id="erc-chatbot-toggle">💬</button>
+        <div id="erc-chatbot-window">
+            <div class="erc-chatbot-title">Energías Renovable del Caribe</div>
+            <div id="erc-chatbot-messages"></div>
+            <form id="erc-chatbot-form" autocomplete="off">
+                <input type="text" id="erc-chatbot-input" placeholder="Escribe tu mensaje...">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+
     <script>
+
+        const toggle = document.getElementById('erc-chatbot-toggle');
+        const windowChat = document.getElementById('erc-chatbot-window');
+
+        toggle.addEventListener('click', () => {
+            windowChat.classList.toggle('hidden');
+        });
         function calcular() {
             let consumo = parseFloat(document.getElementById("consumo").value);
             let precio = parseFloat(document.getElementById("precio").value);
@@ -138,19 +159,6 @@
             document.getElementById("num_paneles").innerText = num_paneles;
         }
     </script>
-
-    <!-- Chatbot Energías Renovable del Caribe -->
-    <div id="erc-chatbot">
-        <button id="erc-chatbot-toggle">💬</button>
-        <div id="erc-chatbot-window">
-            <div class="erc-chatbot-title">Energías Renovable del Caribe</div>
-            <div id="erc-chatbot-messages"></div>
-            <form id="erc-chatbot-form" autocomplete="off">
-                <input type="text" id="erc-chatbot-input" placeholder="Escribe tu mensaje...">
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </div>
     <script src="../assets/script/script.js"></script>
 </body>
 
