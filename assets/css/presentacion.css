@@ -1,10 +1,15 @@
+:root {
+    --header-height: 100px;
+    /* ajusta según la altura real */
+}
+
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 3rem;
     background-color: rgb(214, 226, 236);
-    position:fixed;
+    position: fixed;
     width: 100%;
     z-index: 1000;
     /* fondo claro */
@@ -63,10 +68,13 @@ header {
 /* Sección con imagen de fondo */
 .hero {
     background: url('../img_video/desierto-guajira.jpg') top/cover no-repeat;
-    height: 500px;
+    height: calc(500px + var(--header-height));
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: var(--header-height);
+    box-sizing: border-box;
+    /* para que el padding no sume altura extra */
 }
 
 .hero h1 {
