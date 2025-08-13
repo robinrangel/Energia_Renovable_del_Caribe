@@ -92,6 +92,7 @@ header {
     /* para que el texto no sea muy ancho */
     background: rgba(255, 255, 255, 0.493);
     border-radius: 15px;
+    padding: 20px;
 }
 
 .social h1 {
@@ -102,7 +103,7 @@ header {
 
 .social h2 {
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: bold;
     color: black;
 }
 
@@ -128,7 +129,7 @@ header {
 }
 
 .beneficios__intro p {
-    font-size: 1.2rem;
+    font-size: 1.7rem;
     color: #2e7d32;
     /* verde principal */
     font-weight: bold;
@@ -153,6 +154,19 @@ header {
 .beneficio:hover {
     transform: translateY(-5px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.beneficio img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    object-fit: cover;
+    height: 300px;
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover img {
+    transform: scale(1.05);
 }
 
 .beneficio h3 {
