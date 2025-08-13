@@ -1,10 +1,13 @@
-
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 3rem;
-    background-color: aliceblue;     /* fondo claro */
+    background-color: rgb(214, 226, 236);
+    position:fixed;
+    width: 100%;
+    z-index: 1000;
+    /* fondo claro */
     font-family: sans-serif;
 }
 
@@ -40,7 +43,7 @@ header {
 }
 
 /* Botón estilo "GET A QUOTE" */
-.btn-registro{
+.btn-registro {
     border: 2px solid #69c545;
     color: #69c545;
     padding: 0.6rem 1.4rem;
@@ -58,7 +61,7 @@ header {
 
 }
 
-.container{
+.container {
     background-image: url(../img_video/lago-guajira.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -68,7 +71,7 @@ header {
     text-align: center;
 }
 
-.container__titles{
+.container__titles {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,18 +79,18 @@ header {
     padding: 110px 10px;
 }
 
-.title-one{
+.title-one {
     font-size: 60px;
     width: 1100px;
     color: rgb(29, 28, 28);
 }
 
-.title-two{
+.title-two {
     font-size: 25px;
     color: #224d11;
 }
 
-.contenido{
+.contenido {
     text-align: center;
     padding: 50px 30px;
     display: flex;
@@ -100,33 +103,34 @@ header {
     margin: 0 auto;
 }
 
-.lista{
+.lista {
     width: 1000px;
 }
 
-.imagen-texto{
+.imagen-texto {
     width: 500px;
 }
 
-.contenido img{
+.contenido img {
     max-width: 400px;
     height: auto;
     border-radius: 20px;
 }
 
 .contenido p {
-    text-align:justify;
+    text-align: justify;
     padding-top: 15px;
     max-width: 400px;
     font-size: 1rem;
     line-height: 1.6;
 }
-.contenido h2{
+
+.contenido h2 {
     padding-bottom: 30px;
     border-bottom: 3px solid #27ae60;
 }
 
-.contenido_two{
+.contenido_two {
     text-align: center;
     display: flex;
     flex-direction: row;
@@ -142,12 +146,12 @@ body {
     font-family: sans-serif;
     line-height: 1.6;
     background-color: #F5F5F5;
-    color:black;
+    color: black;
 }
 
 
 dl dt {
-    text-align:left;
+    text-align: left;
     font-size: 1.2rem;
     color: #69c545;
     margin-bottom: .3rem;
@@ -158,44 +162,110 @@ dl dd {
     background: white;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
     margin-bottom: 1.5rem;
 }
 
-.contenido3{
-    padding-top: 50px;
-    padding-left: 30px;
-    padding-right: 30px;
+.beneficios-ambientales {
+    padding: 40px;
+    background-color: #f9f9f9;
 }
 
-.contenido3 h2{
-    color: #69c545 ;
+.contenido3 {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    text-align: center;
 }
 
-.lista3 {
-    border-radius: 12px;
-    padding: 55px;
-    max-width: 1200px;
-    margin: 40px auto;
+.contenido3 h2 {
+    color: #69c545;
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-.lista3 h2 {
-    font-size: 1.8rem;
-    color: black;
-    font-weight: 700;
-    margin-bottom: 20px;
-    border-bottom: 3px solid #27ae60;
-    padding-bottom: 10px;
+.contenido3 p {
+    font-size: 1.1rem;
+    line-height: 1.6;
 }
 
-.lista3 ol li {
-    
-    background: white;
+.lista-beneficios h2 {
+    color: #69c545;
+    text-align: center;
+    font-size: 30px;
+}
+
+.beneficios-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 60rem;
+    margin-bottom: 30px;
+}
+
+.beneficios-btn {
+    border: 2px solid #69c545;
+    color: #69c545;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.beneficios-btn:hover{
+    background-color: #56a537;
+    color: white;
+    border: #56a537;
+}
+
+.beneficios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    gap: 25px;
     padding: 20px;
-    border-left: 5px solid #27ae60;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    
+}
+
+.beneficio-item {
+    background: linear-gradient(180deg, #ffffff, #f7fff3);
+    border-left: 6px solid #69c545;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.beneficio-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+.beneficio-item h3 {
+    color: #69c545;
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.beneficio-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+}
+
+.beneficio-item small {
+    font-size: 0.85rem;
+    color: #555;
+    font-style: italic;
+}
+
+/* Para iconos decorativos */
+.beneficio-item .icono {
+    font-size: 2rem;
+    color: #69c545;
+    margin-bottom: 10px;
 }
 
 /* Estilos generales del footer */
@@ -244,7 +314,8 @@ footer p {
 }
 
 .footer__info a:hover {
-    color: #46882c; /* verde claro al pasar el mouse */
+    color: #46882c;
+    /* verde claro al pasar el mouse */
 }
 
 
@@ -255,11 +326,122 @@ footer .info {
     opacity: 0.9;
 }
 
-/* Adaptación a móviles */
-@media (max-width: 600px) {
-    .footer__info p {
+/* Ajustes responsive */
+
+/* Tablets y portátiles pequeños */
+@media (max-width: 1024px) {
+    header {
         flex-direction: column;
-        align-items: center;
-        gap: 4px;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .title-one {
+        font-size: 2.5rem;
+        width: 90%;
+    }
+
+    .title-two {
+        font-size: 1.2rem;
+    }
+
+    .contenido, 
+    .contenido_two {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .lista, 
+    .imagen-texto {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contenido img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .beneficios-content {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    .logo img {
+        height: 55px;
+    }
+
+    .container {
+        height: auto;
+        padding: 50px 15px;
+    }
+
+    .container__titles {
+        padding: 60px 15px;
+    }
+
+    .title-one {
+        font-size: 2rem;
+    }
+
+    .title-two {
+        font-size: 1rem;
+    }
+
+    .contenido3 p {
+        font-size: 1rem;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+        header {
+        padding: 0.8rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .title-one {
+        font-size: 1.6rem;
+    }
+
+    .title-two {
+        font-size: 0.9rem;
+    }
+
+    .contenido p {
+        font-size: 0.9rem;
+    }
+
+    .beneficio-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .beneficio-item p {
+        font-size: 0.9rem;
+    }
+
+    .beneficios-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
