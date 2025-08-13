@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Formulario de registro
+    // Formulario de registro (si existe en la página)
     const form = document.querySelector("#register form");
     const mensaje = document.getElementById("mensaje-exito");
-
-    form.addEventListener("submit", function(event) {
-        event.preventDefault();
-        mensaje.style.display = "block"; // Muestra el mensaje
-        form.reset();
-    });
+    if (form && mensaje) {
+        form.addEventListener("submit", function(event) {
+            event.preventDefault();
+            mensaje.style.display = "block";
+            form.reset();
+        });
+    }
 
     // Chatbot
     const toggleBtn = document.getElementById('erc-chatbot-toggle');
@@ -18,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (toggleBtn && chatWindow) {
         toggleBtn.onclick = function() {
-            chatWindow.style.display = chatWindow.style.display === 'none' ? 'block' : 'none';
+            // Alterna la visibilidad del chatbot
+            chatWindow.style.display = chatWindow.style.display === 'none' || chatWindow.style.display === '' ? 'block' : 'none';
         };
     }
 
