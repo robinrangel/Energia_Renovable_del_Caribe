@@ -3,7 +3,7 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 3rem;
-    background-color: aliceblue;     /* fondo claro */
+    background-color: rgb(214, 226, 236);
     font-family: sans-serif;
 }
 
@@ -79,7 +79,7 @@ body {
 /* Títulos */
 h1, h2 {
     text-align: center;
-    color: #004466;
+    color: #69c545;
 }
 
 /* Formulario */

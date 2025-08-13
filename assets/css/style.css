@@ -72,7 +72,6 @@ header {
 }
 
 .layout iframe {
-    padding-top: 90px; /* si tu header mide unos 70px */
     position: absolute;
     top: 50%;
     left: 50%;
