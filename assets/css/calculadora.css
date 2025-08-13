@@ -1,0 +1,198 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 3rem;
+    background-color: aliceblue;     /* fondo claro */
+    font-family: sans-serif;
+}
+
+/*logo*/
+.logo img {
+    height: 70px;
+}
+
+/* Menú de navegación */
+.navbar ul {
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    color: #333;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #69c545;
+    /* color naranja al pasar el mouse */
+}
+
+/* Elemento activo */
+.navbar .active {
+    color: #69c545;
+}
+
+/* Botón estilo "GET A QUOTE" */
+.btn-registro{
+    border: 2px solid #69c545;
+    color: #69c545;
+    padding: 0.6rem 1.4rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+
+.btn-registro:hover {
+    background-color: #69c545;
+    color: #fff;
+
+}
+
+/* Estilo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4faff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor principal */
+.container {
+    max-width: 700px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+/* Títulos */
+h1, h2 {
+    text-align: center;
+    color: #004466;
+}
+
+/* Formulario */
+.formulario {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #003344;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #005f86;
+}
+
+/* Resultados */
+.resultados {
+    margin-top: 25px;
+    padding: 15px;
+    background: #e6f7ff;
+    border-radius: 8px;
+}
+
+.resultados p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+/* Estilos generales del footer */
+footer {
+    background-color: rgb(226, 228, 230);
+    color: black;
+    padding: 20px 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+footer .pie {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Texto general */
+footer p {
+    margin: 8px 0;
+}
+
+/* Información de contacto */
+.footer__info {
+    margin: 15px 0;
+}
+
+.footer__info p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* Íconos */
+.footer__info i {
+    color: #4d4c4c;
+    font-size: 16px;
+}
+
+/* Links */
+.footer__info a {
+    color: rgb(48, 48, 48);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer__info a:hover {
+    color: #46882c; /* verde claro al pasar el mouse */
+}
+
+
+/* Frase final */
+footer .info {
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* Adaptación a móviles */
+@media (max-width: 600px) {
+    .footer__info p {
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+}
