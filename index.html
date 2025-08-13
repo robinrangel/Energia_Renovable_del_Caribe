@@ -199,6 +199,67 @@
     <!-- Incluye Font Awesome para los íconos (agrega esto en el <head> de tu HTML) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script src="./assets/script/script.js"></script>
+
+    <!-- Chatbot Energías Renovable del Caribe -->
+    <div id="erc-chatbot">
+        <button id="erc-chatbot-toggle">💬</button>
+        <div id="erc-chatbot-window">
+            <div class="erc-chatbot-title">Energías Renovable del Caribe</div>
+            <div id="erc-chatbot-messages"></div>
+            <form id="erc-chatbot-form" autocomplete="off">
+                <input type="text" id="erc-chatbot-input" placeholder="Escribe tu mensaje...">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script>
+    // Chatbot Energías Renovable del Caribe
+    document.getElementById('erc-chatbot-toggle').onclick = function() {
+        var win = document.getElementById('erc-chatbot-window');
+        win.style.display = win.style.display === 'none' ? 'block' : 'none';
+    };
+
+    document.getElementById('erc-chatbot-form').onsubmit = function(e) {
+        e.preventDefault();
+        var input = document.getElementById('erc-chatbot-input');
+        var msg = input.value.trim();
+        if (!msg) return;
+        addErcMessage('Tú', msg);
+        input.value = '';
+        setTimeout(function() {
+            addErcMessage('Energías Renovable del Caribe', ercBotReply(msg));
+        }, 600);
+    };
+
+    function addErcMessage(sender, text) {
+        var messages = document.getElementById('erc-chatbot-messages');
+        var div = document.createElement('div');
+        div.innerHTML = `<strong>${sender}:</strong> ${text}`;
+        div.style.marginBottom = '8px';
+        messages.appendChild(div);
+        messages.scrollTop = messages.scrollHeight;
+    }
+
+    function ercBotReply(msg) {
+        msg = msg.toLowerCase();
+        if (msg.includes('hola') || msg.includes('buenas')) {
+            return '¡Hola! Soy el asistente de Energías Renovable del Caribe. ¿En qué puedo ayudarte?';
+        }
+        if (msg.includes('contacto') || msg.includes('correo') || msg.includes('teléfono')) {
+            return 'Puedes contactarnos al correo torresjherson93@gmail.com o al teléfono +57 302 4373719.';
+        }
+        if (msg.includes('servicio') || msg.includes('beneficio')) {
+            return 'Ofrecemos servicios de energía solar y eólica, capacitación y apoyo a comunidades rurales. ¿Te gustaría saber más?';
+        }
+        if (msg.includes('recursos') || msg.includes('solar') || msg.includes('eólica')) {
+            return 'La Guajira cuenta con recursos eólicos y solares excepcionales para la generación de energía limpia.';
+        }
+        if (msg.includes('simulador') || msg.includes('costos')) {
+            return 'Puedes usar nuestro simulador de costos en la sección "Simulador de costos" del menú principal.';
+        }
+        return 'No entendí tu pregunta, ¿puedes reformularla o preguntar sobre energía renovable, servicios, contacto o recursos?';
+    }
+    </script>
 </body>
 
 </html>
