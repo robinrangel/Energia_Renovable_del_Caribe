@@ -218,6 +218,8 @@ footer .info {
 /* Móviles pequeños */
 @media (max-width: 480px) {
     header {
+        position: relative;
+        text-align: center;
         padding: 0.8rem;
     }
 }
