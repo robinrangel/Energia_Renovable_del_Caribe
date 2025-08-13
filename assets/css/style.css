@@ -162,7 +162,7 @@ header {
 .content__tag {
     color: #69c545;
     /* verde */
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
     margin-bottom: 10px;
@@ -213,7 +213,7 @@ header {
 .section__tag {
     color: #69c545;
     /* verde */
-    /* font-size: 14px; */
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
 }
@@ -284,7 +284,7 @@ header {
 .container__tag {
     color: #69c545;
     /* verde */
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 2px;
 }
