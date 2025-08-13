@@ -231,6 +231,60 @@ header {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
 }
 
+.ods {
+    background-color: #f9f9f9;
+    padding: 60px 30px;
+    text-align: center;
+}
+
+.ods-title {
+    font-size: 2rem;
+    color: #2e7d32;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.ods-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+    gap: 10px;
+    justify-items: center;
+}
+
+
+.ods-item {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(199, 252, 193, 0.301);
+    padding: 25px 20px;
+    max-width: 270px; /* tamaño fijo para controlar ancho */
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    cursor: default;
+}
+.ods-item:hover {
+    box-shadow: 0 8px 20px rgba(183, 248, 157, 0.315);
+    transform: translateY(-5px);
+}
+
+.ods-icon {
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: #3d8b2f; /* verde acorde a tu diseño */
+}
+
+.ods-item h3 {
+    color: #3d8b2f;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.ods-item p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
 /* Estilos generales del footer */
 footer {
     background-color: rgb(226, 228, 230);
