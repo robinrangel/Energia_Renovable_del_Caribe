@@ -73,7 +73,8 @@ header {
     width: 100%;
     height: 550px;
 
-    display: flex; /* Centrar contenido */
+    display: flex;
+    /* Centrar contenido */
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -84,7 +85,8 @@ header {
 }
 
 .container__social {
-    max-width: 900px; /* para que el texto no sea muy ancho */
+    max-width: 900px;
+    /* para que el texto no sea muy ancho */
     background: rgba(255, 255, 255, 0.493);
     border-radius: 15px;
 }
@@ -104,7 +106,8 @@ header {
 .parrafo {
     background-color: #fff7f2;
     width: 550px;
-    text-align: center;;
+    text-align: center;
+    ;
     display: inline-block;
     border-left: 4px solid #ff7b38;
     padding: 1rem;
@@ -123,7 +126,8 @@ header {
 
 .beneficios__intro p {
     font-size: 1.2rem;
-    color: #2e7d32; /* verde principal */
+    color: #2e7d32;
+    /* verde principal */
     font-weight: bold;
 }
 
@@ -138,7 +142,8 @@ header {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-    border-top: 5px solid #69c545; /* verde usado en tu proyecto */
+    border-top: 5px solid #69c545;
+    /* verde usado en tu proyecto */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -148,7 +153,8 @@ header {
 }
 
 .beneficio h3 {
-    color: #2e7d32; /* verde oscuro */
+    color: #2e7d32;
+    /* verde oscuro */
     font-size: 1.3rem;
     margin-bottom: 10px;
 }
@@ -157,30 +163,6 @@ header {
     font-size: 1rem;
     color: #333;
     line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-    .beneficios {
-        padding: 20px 10px;
-    }
-
-    .beneficio h3 {
-        font-size: 1.1rem;
-    }
-
-    .beneficio p {
-        font-size: 0.95rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .beneficios__intro p {
-        font-size: 1rem;
-    }
-
-    .beneficio {
-        padding: 15px;
-    }
 }
 
 /* Botón de volver */
@@ -255,11 +237,85 @@ footer p {
     /* verde claro al pasar el mouse */
 }
 
-/* Adaptación a móviles */
-@media (max-width: 600px) {
-    .footer__info p {
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+    header {
         flex-direction: column;
-        align-items: center;
-        gap: 4px;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+/* Tablets y móviles grandes */
+@media (max-width: 768px) {
+    .logo img {
+        height: 55px;
+    }
+
+    /* Sección Social */
+    .social {
+        height: auto;
+        padding: 40px 15px;
+    }
+
+    .social h1 {
+        font-size: 2rem;
+    }
+
+    .social h2 {
+        font-size: 1.2rem;
+    }
+
+    .container__social {
+        padding: 15px;
+    }
+
+    .parrafo {
+        width: 90%;
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+    header {
+        padding: 0.8rem;
+        text-align: center;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .social h1 {
+        font-size: 1.6rem;
+    }
+
+    .social h2 {
+        font-size: 1rem;
+    }
+
+    .beneficios__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .beneficio h3 {
+        font-size: 1.1rem;
+    }
+
+    .beneficio p {
+        font-size: 0.9rem;
+    }
+
+    .boton button {
+        padding: 0.6rem 1rem;
+        font-size: 0.9rem;
     }
 }

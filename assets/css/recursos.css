@@ -323,11 +323,122 @@ footer .info {
     opacity: 0.9;
 }
 
-/* Adaptación a móviles */
-@media (max-width: 600px) {
-    .footer__info p {
+/* Ajustes responsive */
+
+/* Tablets y portátiles pequeños */
+@media (max-width: 1024px) {
+    header {
         flex-direction: column;
-        align-items: center;
-        gap: 4px;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .title-one {
+        font-size: 2.5rem;
+        width: 90%;
+    }
+
+    .title-two {
+        font-size: 1.2rem;
+    }
+
+    .contenido, 
+    .contenido_two {
+        flex-wrap: wrap;
+        padding: 20px;
+    }
+
+    .lista, 
+    .imagen-texto {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .contenido img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .beneficios-content {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 768px) {
+    .logo img {
+        height: 55px;
+    }
+
+    .container {
+        height: auto;
+        padding: 50px 15px;
+    }
+
+    .container__titles {
+        padding: 60px 15px;
+    }
+
+    .title-one {
+        font-size: 2rem;
+    }
+
+    .title-two {
+        font-size: 1rem;
+    }
+
+    .contenido3 p {
+        font-size: 1rem;
+    }
+
+    .beneficios-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+        header {
+        padding: 0.8rem;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 0.8rem;
+        text-align: center;
+    }
+
+    .title-one {
+        font-size: 1.6rem;
+    }
+
+    .title-two {
+        font-size: 0.9rem;
+    }
+
+    .contenido p {
+        font-size: 0.9rem;
+    }
+
+    .beneficio-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .beneficio-item p {
+        font-size: 0.9rem;
+    }
+
+    .beneficios-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
     }
 }
