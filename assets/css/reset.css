@@ -31,7 +31,6 @@ ul, ol{
 a{
     display:block;
     text-decoration: none;
-    font-family: inherit;
     font-size: inherit;
     color: inherit;
 }
@@ -47,7 +46,6 @@ img, video, iframe, picture, figure{
 
 form, input, select, textarea, button, label{
     display:block;
-    font-family: inherit;
     font-size: inherit;
     color: inherit;
 }

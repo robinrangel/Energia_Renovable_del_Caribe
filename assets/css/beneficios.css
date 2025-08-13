@@ -92,6 +92,7 @@ header {
     /* para que el texto no sea muy ancho */
     background: rgba(255, 255, 255, 0.493);
     border-radius: 15px;
+    padding: 20px;
 }
 
 .social h1 {
@@ -102,7 +103,7 @@ header {
 
 .social h2 {
     font-size: 1.5rem;
-    font-weight: normal;
+    font-weight: bold;
     color: black;
 }
 
