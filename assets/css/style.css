@@ -7,7 +7,10 @@ header {
     justify-content: space-around;
     align-items: center;
     padding: 1rem 3rem;
-    background-color: aliceblue;
+    background-color: rgb(214, 226, 236);
+    position:fixed;
+    width: 100%;
+    z-index: 1000;
     /* fondo claro */
     font-family: sans-serif;
 }
@@ -69,6 +72,7 @@ header {
 }
 
 .layout iframe {
+    padding-top: 90px; /* si tu header mide unos 70px */
     position: absolute;
     top: 50%;
     left: 50%;
