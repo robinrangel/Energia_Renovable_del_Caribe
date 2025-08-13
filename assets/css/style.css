@@ -38,12 +38,16 @@ header {
 
 .navbar a:hover {
     color: #69c545;
+    border-bottom: 2px solid #69c545;
+    border-radius: 5px;
     /* color naranja al pasar el mouse */
 }
 
 /* Elemento activo */
 .navbar .active {
     color: #69c545;
+    border-bottom: 2px solid #69c545;
+    border-radius: 5px;
 }
 
 /* Botón estilo "GET A QUOTE" */
@@ -209,7 +213,7 @@ header {
 .section__tag {
     color: #69c545;
     /* verde */
-    font-size: 14px;
+    /* font-size: 14px; */
     font-weight: bold;
     letter-spacing: 2px;
 }
