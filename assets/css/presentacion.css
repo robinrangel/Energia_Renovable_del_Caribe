@@ -370,6 +370,8 @@ footer .info {
 @media (max-width: 480px) {
     header {
         padding: 0.8rem;
+        position: relative;
+        text-align: center;
     }
 
     .logo img {

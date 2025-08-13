@@ -304,6 +304,7 @@ footer p {
     header {
         padding: 0.8rem;
         text-align: center;
+        position: relative;
     }
 
     .navbar ul {
