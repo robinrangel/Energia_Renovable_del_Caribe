@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Caribe Solar Market</title>
+  <link rel="icon" href="./assets/img/logo-enterprise.png" type="image/png" />
+  <link rel="stylesheet" href="../e-commerce/assets/css/store.css" />
+  <link rel="stylesheet" href="./assets/fontawesome-free-6.1.2-web/css/all.min.css">
+  <!-- Enlace al archivo CSS externo -->
+</head>
+
+<body>
+  <header id="encabezado">
+    <div class="logo-container">
+      <img src="./assets/img/logo-solar.png" alt="Caribe Solar Market" class="logo">
+      <h1>Caribe Solar Market</h1>
+    </div>
+  </header>
+
+  <nav id="nav-principal">
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Paneles Solares</a></li>
+      <li><a href="#">Energía Eólica</a></li>
+      <li><a href="#">Accesorios</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+
+    <div class="acciones-header">
+      <div class="search-box">
+        <input type="text" placeholder="Buscar productos...">
+        <button><i class="fa fa-search"></i></button>
+      </div>
+      <div class="carrito-container">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="contador-carrito">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ===== Slider hero (pegar después de tu header) ===== -->
+    <section id="hero" class="hero-slider" aria-label="Destacados">
+      <button class="nav prev" aria-label="Anterior">‹</button>
+      <button class="nav next" aria-label="Siguiente">›</button>
+
+      <div class="slides">
+        <article class="slide is-active">
+          <img src="../e-commerce/assets/img/solar-eolico.jpg" alt="Campo de paneles solares al amanecer">
+          <div class="caption">
+            <h1>Caribe Solar Market</h1>
+            <p>La mejor energía renovable del Caribe</p>
+            <a href="#productos" class="btn">Ver productos</a>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="../e-commerce/assets/img/fondo-paneles.jpg" alt="Techo con paneles solares residenciales">
+          <div class="caption">
+            <h1>Paneles Solares</h1>
+            <p>Ahorra en tu factura y cuida el planeta</p>
+            <a href="#paneles" class="btn">Paneles</a>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="../e-commerce/assets/img/granja-eolica.jpg" alt="Aerogeneradores frente al mar">
+          <div class="caption">
+            <h1>Energía Eólica</h1>
+            <p>Aprovecha la fuerza del viento</p>
+            <a href="#eolica" class="btn">Ver eólica</a>
+          </div>
+        </article>
+
+        <article class="slide">
+          <img src="../e-commerce/assets/img/kit-solar.png" alt="Kit solar con inversor y baterías">
+          <div class="caption">
+            <h1>Kits Solares</h1>
+            <p>Soluciones listas para instalar</p>
+            <a href="#kits" class="btn">Comprar kit</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="dots" role="tablist" aria-label="Paginación del slider"></div>
+    </section>
+
+    <section class="tienda">
+      <!-- Panel lateral de filtros -->
+      <aside class="filtros">
+        <h3>Filtros</h3>
+
+        <div class="filtro">
+          <label for="buscar">Buscar:</label>
+          <input type="text" id="buscar" placeholder="Buscar producto...">
+        </div>
+
+        <div class="filtro">
+          <h4>Categorías</h4>
+          <label><input type="checkbox" value="panel" class="filtro-categoria"> Paneles Solares</label>
+          <label><input type="checkbox" value="eolica" class="filtro-categoria"> Energía Eólica</label>
+          <label><input type="checkbox" value="inversor" class="filtro-categoria"> Inversores</label>
+          <label><input type="checkbox" value="bateria" class="filtro-categoria"> Baterías</label>
+        </div>
+
+        <div class="filtro">
+          <h4>Capacidad (W)</h4>
+          <input type="number" id="min-watts" placeholder="Mín">
+          <input type="number" id="max-watts" placeholder="Máx">
+        </div>
+
+        <div class="filtro">
+          <h4>Precio</h4>
+          <input type="range" id="precio" min="0" max="1000000" step="50000">
+          <span id="precio-valor"></span>
+        </div>
+
+        <div class="filtro">
+          <h4>Disponibilidad</h4>
+          <label><input type="checkbox" value="stock" class="filtro-stock"> En stock</label>
+          <label><input type="checkbox" value="pedido" class="filtro-stock"> Bajo pedido</label>
+        </div>
+
+        <div class="filtro">
+          <h4>Marca</h4>
+          <label><input type="checkbox" value="marcaA" class="filtro-marca"> Marca A</label>
+          <label><input type="checkbox" value="marcaB" class="filtro-marca"> Marca B</label>
+        </div>
+      </aside>
+
+      <!-- Grid de productos -->
+      <div class="productos">
+        <h2>Productos</h2>
+        <div id="grid-tarjetas" class="grid-tarjetas">
+          <!-- Las tarjetas se generarán dinámicamente desde JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal producto -->
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="cerrar" onclick="cerrarModal()">&times;</span>
+        <h2 id="modal-titulo"></h2>
+        <img id="modal-img" src="" alt="">
+        <p id="modal-descripcion"></p>
+
+        <table id="modal-ficha" class="ficha-tecnica">
+          <tr>
+            <th>Potencia</th>
+            <td id="ficha-potencia"></td>
+          </tr>
+          <tr>
+            <th>Voltaje</th>
+            <td id="ficha-voltaje"></td>
+          </tr>
+          <tr>
+            <th>Garantía</th>
+            <td id="ficha-garantia"></td>
+          </tr>
+          <tr>
+            <th>Vida útil</th>
+            <td id="ficha-vida"></td>
+          </tr>
+          <tr>
+            <th>Material</th>
+            <td id="ficha-material"></td>
+          </tr>
+        </table>
+
+        <button id="btn-inscribirse" class="btn-inscribirse">Añadir al carrito</button>
+      </div>
+    </div>
+
+  </main>
+  <footer>
+    <p>&copy; 2025 Full stack Express. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="./assets/script/script.js"></script>
+
+</body>
+
+</html>
