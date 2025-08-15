@@ -86,22 +86,53 @@
                 </div>
             </div>
         </section>
+
+        <section class="ods">
+            <h2 class="ods-title">Objetivos de Desarrollo Sostenible (ODS)</h2>
+            <div class="ods-list">
+                <!-- ODS 7 -->
+                <div class="ods-item">
+                    <div class="ods-icon">⚡</div> <!-- ODS 7 Energía asequible y no contaminante -->
+                    <h3>ODS 7</h3>
+                    <p>Energía asequible y no contaminante: Promovemos el acceso a energías limpias en La Guajira.</p>
+                </div>
+                <!-- ODS 13 -->
+                <div class="ods-item">
+                    <div class="ods-icon">🌍</div> <!-- ODS 13 Acción por el clima -->
+                    <h3>ODS 13</h3>
+                    <p>Acción por el clima: Contribuimos a reducir las emisiones y adaptarnos al cambio climático.</p>
+                </div>
+                <!-- ODS 15 -->
+                <div class="ods-item">
+                    <div class="ods-icon">👷‍♂️</div> <!-- ODS 8 Trabajo decente y crecimiento económico -->
+                    <h3>ODS 15</h3>
+                    <p>Vida de ecosistemas terrestres: Protegemos, restauramos y promovemos el uso sostenible de los ecosistemas terrestres para conservar la biodiversidad y combatir la desertificación.
+                    </p>
+                </div>
+                <!-- ODS 11 -->
+                <div class="ods-item">
+                    <div class="ods-icon">🏘️</div> <!-- ODS 11 Ciudades y comunidades sostenibles -->
+                    <h3>ODS 11</h3>
+                    <p>Ciudades y comunidades sostenibles: Promovemos infraestructura energética limpia para todos.</p>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
         <div class="pie">
             <p>
-                © 2023 Energía Renovable del Caribe. Todos los derechos reservados.
+                © 2025 Energía Renovable del Caribe. Todos los derechos reservados.
             </p>
 
             <div class="footer__info">
                 <p>
                     <i class="fas fa-phone"></i>
-                    <a href="tel:+573024373719">+57 302 4373719</a>
+                    <a href="tel:+573044986483">+57 3044986483</a>
                 </p>
                 <p>
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:torresjherson93@gmail.com">torresjherson93@gmail.com</a>
+                    <a href="mailto:energiarenovabledelcaribe@gmail.com">energiarenovabledelcaribe@gmail.com</a>
                 </p>
                 <p>
                     <i class="fas fa-map-marker-alt"></i>
@@ -117,6 +148,20 @@
 
     <!-- Incluye Font Awesome para los íconos (agrega esto en el <head> de tu HTML) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Chatbot Energías Renovable del Caribe -->
+    <div id="erc-chatbot">
+        <button id="erc-chatbot-toggle">💬</button>
+        <div id="erc-chatbot-window">
+            <div class="erc-chatbot-title">Energías Renovable del Caribe</div>
+            <div id="erc-chatbot-messages"></div>
+            <form id="erc-chatbot-form" autocomplete="off">
+                <input type="text" id="erc-chatbot-input" placeholder="Escribe tu mensaje...">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="../assets/script/script.js"></script>
 </body>
 
 </html>

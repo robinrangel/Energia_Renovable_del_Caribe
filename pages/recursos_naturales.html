@@ -39,57 +39,40 @@
         </section>
 
         <section>
-            <div class="contenido">
-                <div class="lista">
-                    <dl>
-                        <h2>Recursos Solares</h2><br>
-                        <dt><b>Potencial</b></dt>
-                        <dd>La Guajira destaca por su alta radiación solar, superando el promedio
-                            mundial en algunas áreas. Se estima que algunas zonas alcanzan los 6
-                            KW por metro cuadrado, lo que representa un 66% superior al promedio
-                            mundial.</dd>
-                        <dt><b>Proyectos</b></dt>
-                        <dd>Aunque los proyectos solares en La Guajira son menos numerosos que los
-                            eólicos, existen iniciativas en marcha, especialmente en municipios del
-                            sur del departamento.</dd>
-                        <dt><b>Beneficios Sociales</b></dt>
-                        <dd>Los proyectos solares también están generando beneficios sociales, como
-                            la implementación de sistemas de bombeo de agua con energía solar fotovoltaica
-                            para comunidades rurales.</dd>
-                    </dl>
+            <div class="tarjetas-container">
+
+                <!-- TARJETA SOLAR -->
+                <div class="tarjeta">
+                    <div class="icono">☀️</div>
+                    <h3>Recursos Solares</h3>
+                    <p><strong>Potencial:</strong> La Guajira destaca por su alta radiación solar, alcanzando los 6
+                        KW/m², un 66% superior al promedio mundial.</p>
+                    <p><strong>Proyectos:</strong> Aunque menos numerosos que los eólicos, hay iniciativas activas en
+                        municipios del sur.</p>
+                    <p><strong>Beneficios Sociales:</strong> Se implementan sistemas solares de bombeo de agua en
+                        comunidades rurales.</p>
+                    <div class="imagen">
+                        <img src="../assets/img_video/image (3).png" alt="Mapa solar">
+                        <span>Mapa de radiación solar GHI: identifica zonas óptimas en la península de La
+                            Guajira.</span>
+                    </div>
                 </div>
-                <div class="imagen-texto">
-                    <img src="../assets/img_video/image (2).png" alt="imagen1">
-                    <p>Mapa detallado de radiación solar (GHI) en La Guajira: destaca
-                        los niveles más elevados en la península, ideal para identificar
-                        zonas preferenciales.</p>
+
+                <!-- TARJETA EÓLICA -->
+                <div class="tarjeta">
+                    <div class="icono">💨</div>
+                    <h3>Recursos Eólicos</h3>
+                    <p><strong>Potencial:</strong> Uno de los mayores del país, con vientos alisios que permitirían
+                        generar hasta 15.000 MW.</p>
+                    <p><strong>Proyectos:</strong> Parques como Windpeshi, Tumawind y Chemesky aportarán 508 MW y 2.340
+                        GWh al año.</p>
+                    <p><strong>Infraestructura:</strong> Se desarrollan líneas de alta tensión y vías de acceso.</p>
+                    <div class="imagen">
+                        <img src="../assets/img_video/image (2).png" alt="Mapa eólico">
+                        <span>Mapa del potencial eólico: colores indican velocidades de viento por zona.</span>
+                    </div>
                 </div>
-            </div>
-            <div class="contenido">
-                <div class="lista">
-                    <dl>
-                        <h2>Recursos Eloicos</h2><br>
-                        <dt><b>Potencial</b></dt>
-                        <dd>La Guajira cuenta con uno de los mayores potenciales eólicos a nivel nacional
-                            y continental, gracias a la intensidad de los vientos alisios que recibe.
-                            Se estima que podría generar 15.000 MW solo en energía eólica, lo que representa
-                            casi el 90% de la energía total que se genera actualmente en Colombia con todas
-                            las fuentes.</dd>
-                        <dt><b>Proyectos</b></dt>
-                        <dd>En la actualidad, hay varios parques eólicos en operación y construcción en la región,
-                            como Windpeshi, Tumawind y Chemesky, que sumarán 508 MW de capacidad instalada y generarán
-                            2.340 GWh al año.</dd>
-                        <dt><b>Infraestructura</b></dt>
-                        <dd>Se están desarrollando importantes obras de infraestructura asociadas a los parques eólicos,
-                            como líneas de alta tensión y mejoras viales para facilitar el acceso a los parques.</dd>
-                    </dl>
-                </div>
-                <div class="imagen-texto">
-                    <img src="../assets/img_video/image (3).png" alt="imagen1">
-                    <p>Mapa eólico regional (potencial de velocidad de viento): identificado
-                        por colores que indican velocidades promedio, útil para zonificar áreas
-                        con alto recurso eólico.</p>
-                </div>
+
             </div>
         </section>
 
@@ -166,17 +149,17 @@
     <footer>
         <div class="pie">
             <p>
-                © 2023 Energía Renovable del Caribe. Todos los derechos reservados.
+                © 2025 Energía Renovable del Caribe. Todos los derechos reservados.
             </p>
 
             <div class="footer__info">
                 <p>
                     <i class="fas fa-phone"></i>
-                    <a href="tel:+573024373719">+57 302 4373719</a>
+                    <a href="tel:+573044986483">+57 3044986483</a>
                 </p>
                 <p>
                     <i class="fas fa-envelope"></i>
-                    <a href="mailto:torresjherson93@gmail.com">torresjherson93@gmail.com</a>
+                    <a href="mailto:energiarenovabledelcaribe@gmail.com">energiarenovabledelcaribe@gmail.com</a>
                 </p>
                 <p>
                     <i class="fas fa-map-marker-alt"></i>
@@ -191,6 +174,19 @@
     </footer>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
+    <!-- Chatbot Energías Renovable del Caribe -->
+    <div id="erc-chatbot">
+        <button id="erc-chatbot-toggle">💬</button>
+        <div id="erc-chatbot-window">
+            <div class="erc-chatbot-title">Energías Renovable del Caribe</div>
+            <div id="erc-chatbot-messages"></div>
+            <form id="erc-chatbot-form" autocomplete="off">
+                <input type="text" id="erc-chatbot-input" placeholder="Escribe tu mensaje...">
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+    <script src="../assets/script/script.js"></script>
 </body>
 
 </html>

@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Solar</title>
+    <title>Simulador de costos</title>
     <link rel="stylesheet" href="../assets/css/calculadora.css">
     <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="shortcut icon" href="../assets/img_video/logo.png" type="image/x-icon">
+
 </head>
+
 <body>
 
     <header>
-         <figure class="logo">
+        <figure class="logo">
             <img src="../assets/img_video/logo.png" alt="logo energy">
         </figure>
 
@@ -24,42 +28,105 @@
             </ul>
         </nav>
 
-        <a href="#register" class="btn-registro">Registrate</a>
+        <a href="../index.html#register" class="btn-registro">Contactanos</a>
     </header>
 
-    <div class="container">
-        <h1>Calculadora de Ahorro con Paneles Solares</h1>
-        <p>Ingresa tu consumo mensual y el precio por kWh para estimar el tamaño del sistema, el costo y el tiempo de recuperación.</p>
+    <main>
+        <div class="container">
+            <h1>Calculadora de Ahorro con Paneles Solares</h1>
+            <p>Ingresa tu consumo mensual y el precio por kWh para estimar el tamaño del sistema, el costo y el tiempo
+                de
+                recuperación.</p>
 
-        <!-- Formulario de entrada -->
-        <div class="formulario">
-            <label for="consumo">Consumo mensual (kWh):</label>
-            <input type="number" id="consumo" placeholder="Ej: 244">
+            <!-- Formulario de entrada -->
+            <div class="formulario">
+                <label for="consumo">Consumo mensual (kWh):</label>
+                <input type="number" id="consumo" placeholder="Ej: 244">
 
-            <label for="precio">Precio por kWh (COP):</label>
-            <input type="number" id="precio" placeholder="Ej: 914.40" step="0.01">
+                <label for="precio">Precio por kWh (COP):</label>
+                <input type="number" id="precio" placeholder="Ej: 914.40" step="0.01">
 
-            <button onclick="calcular()">Calcular</button>
+                <label for="potencia_panel">Potencia de cada panel (W):</label>
+                <select id="potencia_panel">
+                    <option value="350">350 W</option>
+                    <option value="450">450 W</option>
+                    <option value="550">550 W</option>
+                </select>
+
+                <button class="form-button" onclick="calcular()">Calcular</button>
+            </div>
+
+            <!-- Resultados -->
+            <div class="resultados">
+                <h2>Resultados</h2>
+                <p><strong>Consumo objetivo (con 30% extra):</strong> <span id="consumo_obj"></span> kWh/mes</p>
+                <p><strong>Potencia necesaria:</strong> <span id="potencia"></span> kW</p>
+                <p><strong>Costo promedio de instalación:</strong> $<span id="costo"></span> COP</p>
+                <p><strong>Ahorro mensual:</strong> $<span id="ahorro_mes"></span> COP</p>
+                <p><strong>Ahorro anual:</strong> $<span id="ahorro_anual"></span> COP</p>
+                <p><strong>Tiempo recuperación de inversion:</strong> <span id="recuperacion"></span> años</p>
+                <p><strong>Número de paneles necesarios:</strong> <span id="num_paneles"></span></p>
+            </div>
         </div>
+    </main>
 
-        <!-- Resultados -->
-        <div class="resultados">
-            <h2>Resultados</h2>
-            <p><strong>Consumo objetivo (con 30% extra):</strong> <span id="consumo_obj"></span> kWh/mes</p>
-            <p><strong>Potencia necesaria:</strong> <span id="potencia"></span> kW</p>
-            <p><strong>Costo promedio de instalación:</strong> $<span id="costo"></span> COP</p>
-            <p><strong>Ahorro mensual:</strong> $<span id="ahorro_mes"></span> COP</p>
-            <p><strong>Ahorro anual:</strong> $<span id="ahorro_anual"></span> COP</p>
-            <p><strong>Tiempo recuperación de inversion:</strong> <span id="recuperacion"></span> años</p>
+    <footer>
+        <div class="pie">
+            <p>
+                © 2025 Energía Renovable del Caribe. Todos los derechos reservados.
+            </p>
+
+            <div class="footer__info">
+                <p>
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:+573044986483">+57 3044986483</a>
+                </p>
+                <p>
+                    <i class="fas fa-envelope"></i>
+                    <a href="mailto:energiarenovabledelcaribe@gmail.com">energiarenovabledelcaribe@gmail.com</a>
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt"></i>
+                    Valledupar - Cesar, Colombia
+                </p>
+            </div>
+
+            <p class="info">
+                "Generando energía limpia para el desarrollo sostenible del Caribe"
+            </p>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Chatbot Energías Renovable del Caribe -->
+    <div id="erc-chatbot">
+        <button id="erc-chatbot-toggle">💬</button>
+        <div id="erc-chatbot-window">
+            <div class="erc-chatbot-title">Energías Renovable del Caribe</div>
+            <div id="erc-chatbot-messages"></div>
+            <form id="erc-chatbot-form" autocomplete="off">
+                <input type="text" id="erc-chatbot-input" placeholder="Escribe tu mensaje...">
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </div>
 
+
     <script>
+
+        const toggle = document.getElementById('erc-chatbot-toggle');
+        const windowChat = document.getElementById('erc-chatbot-window');
+
+        toggle.addEventListener('click', () => {
+            windowChat.classList.toggle('hidden');
+        });
         function calcular() {
             let consumo = parseFloat(document.getElementById("consumo").value);
             let precio = parseFloat(document.getElementById("precio").value);
+            let potencia_panel = parseFloat(document.getElementById("potencia_panel").value);
 
-            if (isNaN(consumo) || isNaN(precio) || consumo <= 0 || precio <= 0) {
+            if (isNaN(consumo) || isNaN(precio) || consumo <= 0 || precio <= 0 || isNaN(potencia_panel) || potencia_panel <= 0) {
                 alert("Por favor, ingresa valores válidos.");
                 return;
             }
@@ -84,6 +151,10 @@
             // Tiempo de recuperación (años)
             let recuperacion = costo_instalacion / ahorro_anual;
 
+            // Cálculo de número de paneles
+            let potencia_total_watts = potencia * 1000;
+            let num_paneles = Math.ceil(potencia_total_watts / potencia_panel);
+
             // Mostrar resultados
             document.getElementById("consumo_obj").innerText = consumo_obj.toFixed(2);
             document.getElementById("potencia").innerText = potencia.toFixed(2);
@@ -91,34 +162,10 @@
             document.getElementById("ahorro_mes").innerText = ahorro_mensual.toLocaleString();
             document.getElementById("ahorro_anual").innerText = ahorro_anual.toLocaleString();
             document.getElementById("recuperacion").innerText = recuperacion.toFixed(1);
+            document.getElementById("num_paneles").innerText = num_paneles;
         }
     </script>
-
-    <footer>
-        <div class="pie">
-            <p>
-                © 2023 Energía Renovable del Caribe. Todos los derechos reservados.
-            </p>
-
-            <div class="footer__info">
-                <p>
-                    <i class="fas fa-phone"></i>
-                    <a href="tel:+573024373719">+57 302 4373719</a>
-                </p>
-                <p>
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:torresjherson93@gmail.com">torresjherson93@gmail.com</a>
-                </p>
-                <p>
-                    <i class="fas fa-map-marker-alt"></i>
-                    Valledupar - Cesar, Colombia
-                </p>
-            </div>
-
-            <p class="info">
-                "Generando energía limpia para el desarrollo sostenible del Caribe"
-            </p>
-        </div>
-    </footer>
+    <script src="../assets/script/script.js"></script>
 </body>
+
 </html>

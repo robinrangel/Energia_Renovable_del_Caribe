@@ -1,10 +1,18 @@
+body{
+    font-family: sans-serif;
+}
+:root {
+    --header-height: 100px;
+    /* ajusta según la altura real */
+}
+
 header {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 1rem 3rem;
     background-color: rgb(214, 226, 236);
-    position:fixed;
+    position: fixed;
     width: 100%;
     z-index: 1000;
     /* fondo claro */
@@ -67,8 +75,11 @@ header {
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
-    height: 450px;
+    height: calc(500px + var(--header-height));
     text-align: center;
+    padding-top: var(--header-height);
+    box-sizing: border-box;
+    /* para que el padding no sume altura extra */
 }
 
 .container__titles {
@@ -90,80 +101,66 @@ header {
     color: #224d11;
 }
 
-.contenido {
-    text-align: center;
-    padding: 50px 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 1.5rem;
-    margin: 0 auto;
+.tarjetas-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 40px;
 }
 
-.lista {
-    width: 1000px;
+.tarjeta {
+  background-color: #ffffff;
+  border-left: 6px solid #27ae60;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 650px;
+  padding: 25px;
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
 }
 
-.imagen-texto {
-    width: 500px;
+.tarjeta:hover {
+  transform: translateY(-5px);
 }
 
-.contenido img {
-    max-width: 400px;
-    height: auto;
-    border-radius: 20px;
+.tarjeta .icono {
+  font-size: 2rem;
+  margin-bottom: 10px;
 }
 
-.contenido p {
-    text-align: justify;
-    padding-top: 15px;
-    max-width: 400px;
-    font-size: 1rem;
-    line-height: 1.6;
+.tarjeta h3 {
+  font-size: 1.6rem;
+  color: #2ecc71;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #e1e1e1;
+  padding-bottom: 10px;
 }
 
-.contenido h2 {
-    padding-bottom: 30px;
-    border-bottom: 3px solid #27ae60;
+.tarjeta p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
 }
 
-.contenido_two {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    gap: 1.5rem;
-    margin: 0 auto;
+.tarjeta .imagen {
+  margin-top: 15px;
 }
 
-body {
-    font-family: sans-serif;
-    line-height: 1.6;
-    background-color: #F5F5F5;
-    color: black;
+.tarjeta .imagen img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  display: block;
 }
 
-
-dl dt {
-    text-align: left;
-    font-size: 1.2rem;
-    color: #69c545;
-    margin-bottom: .3rem;
-}
-
-dl dd {
-    text-align: left;
-    background: white;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    margin-bottom: 1.5rem;
+.tarjeta .imagen span {
+  display: block;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  color: #666;
+  text-align: justify;
 }
 
 .beneficios-ambientales {
@@ -213,7 +210,7 @@ dl dd {
     transition: all 0.3s ease;
 }
 
-.beneficios-btn:hover{
+.beneficios-btn:hover {
     background-color: #56a537;
     color: white;
     border: #56a537;
@@ -326,6 +323,83 @@ footer .info {
     opacity: 0.9;
 }
 
+/* Chatbot estilos */
+#erc-chatbot {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+}
+#erc-chatbot-toggle {
+    background: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    font-size: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+#erc-chatbot-toggle:hover {
+    background: #00796b;
+}
+#erc-chatbot-window {
+    display: none;
+    width: 320px;
+    height: 400px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+    padding: 15px;
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    flex-direction: column;
+}
+.erc-chatbot-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #009688;
+    font-size: 18px;
+    text-align: center;
+}
+#erc-chatbot-messages {
+    height: 270px;
+    overflow-y: auto;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 15px;
+}
+#erc-chatbot-form {
+    display: flex;
+    gap: 5px;
+}
+#erc-chatbot-input {
+    flex: 1;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+#erc-chatbot-form button {
+    background: #009688;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+#erc-chatbot-form button:hover {
+    background: #00796b;
+}
+
+
 /* Ajustes responsive */
 
 /* Tablets y portátiles pequeños */
@@ -351,13 +425,13 @@ footer .info {
         font-size: 1.2rem;
     }
 
-    .contenido, 
+    .contenido,
     .contenido_two {
         flex-wrap: wrap;
         padding: 20px;
     }
 
-    .lista, 
+    .lista,
     .imagen-texto {
         width: 100%;
         max-width: 500px;
@@ -410,8 +484,10 @@ footer .info {
 
 /* Móviles pequeños */
 @media (max-width: 480px) {
-        header {
+    header {
         padding: 0.8rem;
+        position: relative;
+        text-align: center;
     }
 
     .navbar ul {
